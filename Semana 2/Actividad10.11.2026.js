@@ -85,40 +85,24 @@ function capitalizar(texto) {
 
 
 // PROCESO DEL PROGRAMA
-
 let ventas = limpiarRegistro(registro); // R: Limpia el registro y guarda las ventas correctas.
-
 let resumen = resumenPorProducto(ventas); // R: Agrupa los productos y calcula sus ingresos.
-
 let precios = ventas.map((x) => x.precio); // R: Obtiene los precios de todas las ventas.
-
 let total = sumar(...precios); // R: Suma todos los precios utilizando la funcion sumar.
-
 let preciosConDescuento = aplicarATodos(precios, descuento); // R: Aplica el descuento del 15% a todos los precios.
-
 let promocion = productoAlAzar(ventas); // R: Selecciona un producto al azar para la promocion.
 
 
 // REPORTE FINAL
-
 console.log("========== REPORTE DE LA CAFETERIA =========="); // R: Muestra el titulo del reporte.
-
 console.log("PRODUCTOS VENDIDOS:"); // R: Indica el inicio de la lista de productos.
-
 for (let i = 0; i < resumen.length; i++) { // R: Recorre los productos del resumen.
     console.log(capitalizar(resumen[i].producto) + " | Veces vendido: " + resumen[i].veces + " | Ingreso: $" + resumen[i].ingreso.toFixed(2)); // R: Imprime el producto, las ventas y el ingreso.
 }
-
 console.log("---------------------------------------------"); // R: Separa la lista del total.
-
 console.log("TOTAL DE VENTAS: $" + total.toFixed(2)); // R: Muestra el ingreso total de la cafeteria.
-
 console.log("PRODUCTO DE LA PROMOCION: " + capitalizar(promocion)); // R: Muestra el producto elegido al azar.
-
 console.log("---------------------------------------------"); // R: Separa el reporte de la prueba de descuentos.
-
-console.log("EJEMPLO DE PRECIOS CON DESCUENTO DEL 15%:"); // R: Muestra la prueba de las funciones de descuento.
-
+console.log("PRECIOS CON DESCUENTO DEL 15%:"); // R: Muestra la prueba de las funciones de descuento.
 console.log(preciosConDescuento); // R: Imprime los precios despues de aplicar el descuento.
-
 console.log("============================================="); // R: Finaliza el reporte.
