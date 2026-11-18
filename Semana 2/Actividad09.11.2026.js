@@ -1,4 +1,4 @@
-// 1. DECLARACION: funcion descuento con porcentaje predeterminado de 10.
+// DECLARACION: funcion descuento con porcentaje predeterminado de 10.
 function descuento(precio, porcentaje = 10) {
     return precio - (precio * porcentaje / 100); // R: Calcula el descuento y lo resta al precio original.
 }
@@ -13,7 +13,6 @@ const promedio = function (...notas) {
 };
 console.log(promedio(8, 9, 10)); // R: 9. Calcula el promedio de las tres notas.
 console.log(promedio()); // R: 0. No se ingresaron notas.
-
 
 // 3. FUNCION FLECHA: recibe una funcion y un valor, y aplica la funcion dos veces.
 const aplicarDosVeces = (fn, x) => fn(fn(x)); // R: Ejecuta fn con x y vuelve a ejecutar fn con el primer resultado.
